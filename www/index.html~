@@ -121,7 +121,7 @@
         });
         return false;
       });
-$.getJSON( "http://localhost/cakephp/events/index_json", function( data ) {
+$.getJSON( "http://192.168.15.115/cakephp/events/index_json", function( data ) {
   var items = [];
 
   for(i in data.events) {
