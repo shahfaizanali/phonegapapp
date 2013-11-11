@@ -127,9 +127,9 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
 	{
 		for(j in data[i].subpages)
 		{
-		items.push( "<li id='" +i+j + "'>"+data[i].subpages[j].url + "</li>" );
+		items.push( "<ul><li id='" +i+j + "'>"+data[i].subpages[j].url + "</li>" );
 		}
-
+items.push("</ul>");
 	}
 	
  }
