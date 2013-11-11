@@ -50,7 +50,7 @@
                                    <link rel="shortcut icon" href="assets/ico/favicon.png">
     </head>
     <body>
-        <div >
+        
            
     <div id="page">
       <div id="content">
@@ -60,7 +60,7 @@
               <div class="pull-center">
              
                 <div class="menu-btn">
-                <a href="#menu" class="menu-btn"><img src="img/menu-btn.png"></a></p>
+                <a id="m" href="#menu" class="menu-btn"><img src="img/menu-btn.png"></a></p>
               </div>
                 
               </div>
@@ -72,7 +72,7 @@
       <nav id="menu">
         
       </nav>
-    </div>  
+     
    
    
 <script type="text/javascript" src="js/jquery.js"></script>  
@@ -91,7 +91,7 @@
 <script src="js/jquery.smooth-scroll.js"></script>
   <script>
     $(document).ready(function() {
-
+$( "#m" ).click();
       $('ul.mainnav a').smoothScroll();
 
       $('p.subnav a').click(function(event) {
@@ -122,12 +122,12 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
 
   for(i in data)
  {	
-	items.push( "<li id='" + i + "'>"+data[i].url + "</li>" );
+	items.push( "<li id='" + i + "'><a href='"+data[i].url+"'>"+data[i].title + "</a></li>" );
 	if(data[i].subpages.length!=0)
-	{
+	{items.push("<ul>");
 		for(j in data[i].subpages)
 		{
-		items.push( "<ul><li id='" +i+j + "'>"+data[i].subpages[j].url + "</li>" );
+		items.push( "<li id='" +i+j + "'><a href='"+data[i].subpages.url+"'>"+data[i].subpages.title + "</a></li>" );
 		}
 items.push("</ul>");
 	}
