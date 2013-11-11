@@ -50,7 +50,7 @@
                                    <link rel="shortcut icon" href="assets/ico/favicon.png">
     </head>
     <body>
-        <div class="app">
+        <div >
            
     <div id="page">
       <div id="content">
@@ -117,12 +117,12 @@
         });
         return false;
       });
-$.getJSON( "http://192.168.15.115/cakephp/events/index_json", function( data ) {
+$.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", function( data ) {
   var items = [];
 
-  for(i in data.events) {
+  for(i in data) {
 	
-    items.push( "<li id='" + i + "'>" + data.events[i].Event.buy_now+ "</li>" );
+    items.push( "<li id='" + i + "'>" +data[i] + "</li>" );
   }
  
   $( "<ul/>", {
