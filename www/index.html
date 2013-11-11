@@ -123,7 +123,7 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
   for(i in data)
  {
 for(j in data[i]){	
-items.push( "<li id='" + i + "'>" +data[j] + "</li>" );
+items.push( "<li id='" + i + "'>" +data[i][j] + "</li>" );
 	}
  }
   $( "<ul/>", {
