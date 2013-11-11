@@ -120,11 +120,17 @@
 $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", function( data ) {
   var items = [];
 
-  for(i in data) {
-	
-    items.push( "<li id='" + i + "'>" +data[i] + "</li>" );
-  }
- 
+  for(i in data)
+ {
+	items.push( "<li id='" + i + "'>" +data[i].url + "</li>" );
+	if(data[i].subpages.length!=0)
+	{	
+		for(j in data[i].subpages)
+		{
+			items.push( "<li id='" + i + "'>" +s[i].subpages[j].url + "</li>" );
+		}
+  	}
+ }
   $( "<ul/>", {
     "class": "my-new-list",
     html: items.join( "" )
