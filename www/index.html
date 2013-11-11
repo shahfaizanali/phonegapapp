@@ -124,12 +124,13 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
  {	
 	items.push( "<li id='" + i + "'><a href='"+data[i].url+"'>"+data[i].title + "</a></li>" );
 	if(data[i].subpages.length!=0)
-	{items.push("<ul>");
+	{
+		items.push("<ul>");
 		for(j in data[i].subpages)
 		{
-		items.push( "<li id='" +i+j + "'><a href='"+data[i].subpages.url+"'>"+data[i].subpages.title + "</a></li>" );
+		items.push( "<li style='margin-left:3px;' id='" +i+j + "'><a href='"+data[i].subpages[j].url+"'>"+data[i].subpages[j].title + "</a></li>" );
 		}
-items.push("</ul>");
+		items.push("</ul>");
 	}
 	
  }
