@@ -146,6 +146,8 @@ $.ajax({
 });
 $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", function( data ) 
 {
+ $.support.cors = true;
+   $.mobile.allowCrossDomainPages = true;
   var items = [];
 
   for(i in data)
@@ -165,7 +167,7 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
   $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
 }
 ).fail(function(jqxhr, textStatus, error) {
-    alert( "error"+textstatus+error);
+    alert( "error"+textstatus+" "+error);
   });
     });
 

@@ -165,7 +165,7 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
   $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
 }
 ).fail(function(jqxhr, textStatus, error) {
-    alert( "error"+textstatus+error);
+    alert( "error"+textstatus+" "+error);
   });
     });
 
