@@ -117,7 +117,12 @@ $( "#m" ).click();
         });
         return false;
       });
-$.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", function( data ) {
+$.ajax({
+    type: 'GET',
+    url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
+    dataType: 'json',
+    success: function( data ) 
+{
   var items = [];
 
   for(i in data)
@@ -134,12 +139,33 @@ $.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", fu
 	}
 	
  }
-  $( "<ul/>", {
-    "class": "my-new-list",
-    html: items.join( "" )
-  }).appendTo( "nav" );
-}).fail(function(jqxhr, textStatus, error) {
-    alert( textstatus+error);
+  $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
+},
+    
+    async: false
+});
+$.getJSON( "http://test3.uscommunities.org/index.php?id=729&type=1383156157", function( data ) 
+{
+  var items = [];
+
+  for(i in data)
+ {	
+	items.push( "<li id='" + i + "'><a href='"+data[i].url+"'>"+data[i].title + "</a></li>" );
+	if(data[i].subpages.length!=0)
+	{
+		items.push("<ul>");
+		for(j in data[i].subpages)
+		{
+		items.push( "<li style='margin-left:3px;' id='" +i+j + "'><a href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</a></li>" );
+		}
+		items.push("</ul>");
+	}
+	
+ }
+  $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
+}
+).fail(function(jqxhr, textStatus, error) {
+    alert( "error"+textstatus+error);
   });
     });
 
