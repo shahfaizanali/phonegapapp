@@ -37,17 +37,7 @@
         padding: 0px;
       }
     </style>
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-    <![endif]-->
-
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+   
     </head>
     <body>
         
@@ -70,15 +60,14 @@
         </section>
       </div>
       <nav id="menu">
-        <li>just for checking</li>
+        
       </nav>
      
    
    
 <script type="text/javascript" src="js/jquery.js"></script>  
-<script type="text/javascript" src="js/bootstrap-dropdown.js"></script> 
-<script type="text/javascript" src="js/jquery.hoverizr.js"></script> 
-<script src="js/bootstrap-collapse.js"></script>
+
+>
 
 <!--left slider menu-->
 <script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
@@ -88,35 +77,10 @@
   });
 </script>
 <!--left slider menu-->
-<script src="js/jquery.smooth-scroll.js"></script>
+
   <script>
     $(document).ready(function() {
 $( "#m" ).click();
-      $('ul.mainnav a').smoothScroll();
-
-      $('p.subnav a').click(function(event) {
-        event.preventDefault();
-        var link = this;
-        $.smoothScroll({
-          scrollTarget: link.hash
-        });
-      });
-
-      $('button.scrollsomething').click(function() {
-        $.smoothScroll({
-          scrollElement: $('div.scrollme'),
-          scrollTarget: '#findme'
-        });
-        return false;
-      });
-      $('button.scrollhorz').click(function() {
-        $.smoothScroll({
-          direction: 'left',
-          scrollElement: $('div.scrollme'),
-          scrollTarget: '.horiz'
-        });
-        return false;
-      });
 $.ajax({
     type: 'GET',
     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
@@ -148,38 +112,6 @@ $.ajax({
     });
 
   </script>
-
-<script type="text/javascript">  
-    $(document).ready(function () {  
-        $('.dropdown-toggle').dropdown();
-         });
-
-        $('.ex-btn').click(function(){
-        $(".ex-div").slideToggle("1000");
-        });
-
-        //to avoide page goes up on click
-
-        $('a.ex-btn, #close, ').click(function(event) {
-        event.preventDefault();
-          $(this).html();
-        });
-
-</script>  
-<script type="text/javascript">
-      //$('img').hide();
-      $(window).load(function() {
-        $('.ex1').hoverizr({speedOut: 'slow',effect:"blur",overlay: "bottom",container: "pipa",width: "100px", height: "100px",stretch: "yes"});
-        $('.ex2').hoverizr({speedOut: 'slow'});
-        $('#ex3').hoverizr({speedIn: 'slow',effect:"invert"});
-      });
-
-      $(".menu").click(function(){
-          $(".top-bar").slideToggle("slow");
-        });
-
-      
-    </script>
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
