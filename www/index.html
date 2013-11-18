@@ -80,23 +80,8 @@
 
   <script>
     function getcontent() {
-	alert('infunc');
-	alert(this.attribute('href'));
 	//code
-	$.ajax({
-    type: 'GET',
-    url: this.attribute('href')+"?tx_bnadaptiveprofile=Phone",
-    dataType: 'html',
-    success: function( data ) 
-{
-alert("hello");
- $( "<div/>", {
-    style:"color:white",
-    html: data
-  }).appendTo( ".container" );
-}});}
-    
-    
+    }
     $(document).ready(function()
     {
 	$( "#m" ).click();
@@ -110,26 +95,52 @@ alert("hello");
 		      
 			for(i in data)
 			{	
-			       items.push( "<li onclick='getcontent(this)' class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
+			       items.push( "<li class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
 			       if(data[i].subpages.length!=0)
 			       {
 				       
 				       for(j in data[i].subpages)
 				       {
-				       items.push( "<li onclick='getcontent(this)' class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
+				       items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
 				       }
 				       
 			       }
 			       
 			}
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
+		    	$(".link").click(function(e){
+    e.preventDefault();
+alert('in func');//this will prevent the link trying to navigate to another page
+    var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
+alert(href);
+$.ajax({
+    type: 'GET',
+    url: href,
+    dataType: 'html',
+    success: function( data ) 
+{
+alert("hello");
+ $( "<div/>", {
+    html: data,
+    style:"color:white"
+  }).appendTo( ".container" );
+}
+,
+    
+    async: true
+});
+    //do the update
+
+    //when update has finished, navigate to the other page
+    //window.location = href;
+});
 		    }
 	    ,
 		
 		async: true
 	}
 );
-	
+	alert('hello');
 
 
     
