@@ -91,15 +91,15 @@ $.ajax({
 
   for(i in data)
  {	
-	items.push( "<li class='link' id='" + i + " href='"+data[i].url+"'>"+data[i].title + "</li>" );
+	items.push( "<li class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
 	if(data[i].subpages.length!=0)
 	{
-		items.push("<ul>");
+		
 		for(j in data[i].subpages)
 		{
-		items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + " href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
+		items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
 		}
-		items.push("</ul>");
+		
 	}
 	
  }
@@ -110,8 +110,9 @@ $.ajax({
 });
 
     });
-$(".link").click(function(e){
-    e.preventDefault();//this will prevent the link trying to navigate to another page
+$("ul.my-new-list li").click(function(e){
+    e.preventDefault();
+alert('in func');//this will prevent the link trying to navigate to another page
     var href = $(this).attr("href");//get the href so we can navigate later
 alert(href);
 $.ajax({
