@@ -107,13 +107,13 @@ alert("hello");
 		      
 			for(i in data)
 			{	
-			       items.push( "<li onclick='getcontent("+data[i].url+","+ data[i].title+")' class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
+			       items.push( "<li onclick='getcontent('"+data[i].url+"','"+ data[i].title+"')' class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
 			       if(data[i].subpages.length!=0)
 			       {
 				       
 				       for(j in data[i].subpages)
 				       {
-				       items.push( "<li onclick='getcontent("+data[i].url+","+ data[i].title+")' class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
+				       items.push( "<li onclick='getcontent('"+data[i].url+"','"+ data[i].title+"')' class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
 				       }
 				       
 			       }
