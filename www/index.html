@@ -83,9 +83,7 @@
 <!--left slider menu-->
 
   <script>
-    function getcontent() {
-	//code
-    }
+  
     $(document).ready(function()
     {
 	$( "#m" ).click();
@@ -114,16 +112,18 @@
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
 		    	$(".link").click(function(e){
     e.preventDefault();
-alert('in func');//this will prevent the link trying to navigate to another page
+//this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
-alert(href);
+    $(".link").css("color", "white");
+$( this ).css( "color", "red" );
+
 $.ajax({
     type: 'GET',
     url: href,
     dataType: 'html',
     success: function( data ) 
 {
-alert("hello "+data);
+
  $( "#linkcontent").html(data);
 }
 ,
@@ -141,7 +141,7 @@ alert("hello "+data);
 		async: true
 	}
 );
-	alert('hello');
+	
 
 
     
