@@ -109,8 +109,7 @@ $.ajax({
     async: true
 });
 
-    });
-$("ul.my-new-list li").click(function(e){
+$(".link").click(function(e){
     e.preventDefault();
 alert('in func');//this will prevent the link trying to navigate to another page
     var href = $(this).attr("href");//get the href so we can navigate later
@@ -135,6 +134,8 @@ alert("hello");
     //when update has finished, navigate to the other page
     //window.location = href;
 });
+    });
+
 
   </script>
         </div>
