@@ -112,7 +112,7 @@ $.ajax({
 $(".link").click(function(e){
     e.preventDefault();
 alert('in func');//this will prevent the link trying to navigate to another page
-    var href = $(this).attr("href");//get the href so we can navigate later
+    var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
 alert(href);
 $.ajax({
     type: 'GET',

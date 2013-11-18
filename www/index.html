@@ -79,40 +79,43 @@
 <!--left slider menu-->
 
   <script>
-    $(document).ready(function() {
-$( "#m" ).click();
-$.ajax({
-    type: 'GET',
-    url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
-    dataType: 'json',
-    success: function( data ) 
-{
-  var items = [];
-
-  for(i in data)
- {	
-	items.push( "<li class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
-	if(data[i].subpages.length!=0)
-	{
+    $(document).ready(function()
+    {
+	$( "#m" ).click();
+	    $.ajax({
+	     type: 'GET',
+	     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
+	     dataType: 'json',
+	     success: function( data ) 
+		    {
+			var items = [];
+		      
+			for(i in data)
+			{	
+			       items.push( "<li class='link' id='" + i + "' href='"+data[i].url+"'>"+data[i].title + "</li>" );
+			       if(data[i].subpages.length!=0)
+			       {
+				       
+				       for(j in data[i].subpages)
+				       {
+				       items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
+				       }
+				       
+			       }
+			       
+			}
+		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
+		    }
+	    ,
 		
-		for(j in data[i].subpages)
-		{
-		items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
-		}
-		
+		async: false
 	}
-	
- }
-  $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
-},
-    
-    async: true
-});
-
-$(".link").click(function(e){
+);
+	alert('hello');
+	$(".link").click(function(e){
     e.preventDefault();
 alert('in func');//this will prevent the link trying to navigate to another page
-    var href = $(this).attr("href");//get the href so we can navigate later
+    var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
 alert(href);
 $.ajax({
     type: 'GET',
@@ -134,6 +137,8 @@ alert("hello");
     //when update has finished, navigate to the other page
     //window.location = href;
 });
+
+    
     });
 
 
