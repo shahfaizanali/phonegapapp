@@ -35,6 +35,10 @@
       body {
         padding: 0px;
         padding: 0px;
+	
+      }
+      .whiteclr
+      {color: white;
       }
     </style>
    
@@ -54,7 +58,7 @@
               </div>
                 
               </div>
-              
+              <div id="linkcontent" class="whiteclr" ></div>
             </div>
           </div>
         </section>
@@ -119,11 +123,8 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-alert("hello");
- $( "<div/>", {
-    html: data,
-    style:"color:white"
-  }).appendTo( ".container" );
+alert("hello "+data);
+ $( "#linkcontent").html(data);
 }
 ,
     
