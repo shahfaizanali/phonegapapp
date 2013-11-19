@@ -65,7 +65,7 @@
           </div>
         </section>
 	  <div id="linkcontent" style="color: white;" >
-	hjyghjghjghjgh
+	
      </div>
       </div>
       <nav id="menu">
@@ -108,19 +108,19 @@
 				       
 				       for(j in data[i].subpages)
 				       {
-				       items.push( "<li class='link' style='margin-left:3px;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
+				       items.push( "<li class='link' style='margin-left:3%;' id='" +i+j + "' href='"+data[i].subpages[j].url+"'>- "+data[i].subpages[j].title + "</li>" );
 				       }
 				       
 			       }
 			       
 			}
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
-		    	$(".link").click(function(e){
-    e.preventDefault();
+		    	$(".link").click(function(){
+   
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
-    $(".link").css("color", "white");
-$( this ).css( "color", "red" );
+    $(".link").css("border", "none");
+    $( this ).css( "border", "1px solid white" );
 
 $.ajax({
     type: 'GET',
@@ -128,7 +128,7 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-
+$( "#m" ).click();
  $( "#linkcontent").html(data);
 }
 ,
