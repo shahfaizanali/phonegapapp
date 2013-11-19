@@ -24,50 +24,36 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>Json App</title>
- <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="custom-fonts/fonts.css" rel="stylesheet">
-    <!-- Left Sliding Menu -->
-    <link type="text/css" rel="stylesheet" href="css/mmenu.css" />
-
-    <style type="text/css">
-      body {
-        padding: 0px;
-        padding: 0px;
-	
-      }
-      .whiteclr
-      {color: white;
-      }
-    </style>
-   
+ <link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/styles.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		<script src="js/jquery.mobile-menu.js"></script>
+		<script>
+			$(function(){
+				$("body").mobile_menu({
+					menu: ['#main-nav ul'],
+      		menu_width: 200,
+      		prepend_button_to: '#mobile-bar'
+				});
+			});
+		</script>
     </head>
     <body>
-        
+      <header>
+			<nav id="mobile-bar"></nav>
+			
+			<nav id="main-nav">
+				
+			</nav>
+			
+			
+			</header>
+		<section>
+			</section>
+		
+		<footer>
+			</footer>  
            
-    <div id="page">
-      <div id="content">
-        <section id="top">
-          <div class="row-fluid black-box">
-            <div class="container">
-              <div class="pull-center">
-             
-                <div class="menu-btn">
-                <a id="m" href="#menu" class="menu-btn"><img src="img/menu-btn.png"></a></p>
-              </div>
-                
-              </div>
-              
-            </div>
-          </div>
-        </section>
-      </div>
-      <nav id="menu">
-        
-      </nav>
-     <div id="linkcontent" style="color: white;" ></div>
-   
    
 <script type="text/javascript" src="js/jquery.js"></script>  
 
@@ -109,7 +95,7 @@
 			       }
 			       
 			}
-		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
+		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "main-nav" );
 		    	$(".link").click(function(e){
     e.preventDefault();
 //this will prevent the link trying to navigate to another page
@@ -124,7 +110,7 @@ $.ajax({
     success: function( data ) 
 {
 
- $( "#linkcontent").html(data);
+ $( "section").html(data);
 }
 ,
     
