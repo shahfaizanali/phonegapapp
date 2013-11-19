@@ -29,13 +29,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.mobile-menu.js"></script>
 		<script>
-			$(function(){
-				$("body").mobile_menu({
-					menu: ['#main-nav ul'],
-      		menu_width: 200,
-      		prepend_button_to: '#mobile-bar'
-				});
-			});
+			
 		</script>
     </head>
     <body>
@@ -57,16 +51,9 @@
    
 <script type="text/javascript" src="js/jquery.js"></script>  
 
->
 
-<!--left slider menu-->
-<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
-<script type="text/javascript">
-  $(function() {
-    $('nav#menu').mmenu();
-  });
-</script>
-<!--left slider menu-->
+
+
 
   <script>
   
@@ -95,12 +82,19 @@
 			       }
 			       
 			}
-		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "main-nav" );
+		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "#main-nav" );
+		    $(function(){
+				$("body").mobile_menu({
+					menu: ['#main-nav ul'],
+      		menu_width: 200,
+      		prepend_button_to: '#mobile-bar'
+				});
+			});
 		    	$(".link").click(function(e){
     e.preventDefault();
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
-    $(".link").css("color", "white");
+    $(".link").css("color", "black");
 $( this ).css( "color", "red" );
 
 $.ajax({
