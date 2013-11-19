@@ -18,62 +18,80 @@
     under the License.
 -->
 <html>
-    	<head>
-		<title></title>
-		<meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-    <meta http-equiv="cleartype" content="on">
-    
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="APP TITLE">
-        <script src="js/jquery.js"></script>
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/styles.css">
-		    <script type="text/css">#build-menu-button{
-			background-image:url('');
-			
-			}</script>
-		
-		<script src="js/jquery.mobile-menu.js"></script>
-		<script>
-			$(function(){
-				$("body").mobile_menu({
-					menu: ['#main-nav ul', '#secondary-nav ul'],
-      		menu_width: 200,
-		button_contetnt:"",
-      		prepend_button_to: '#mobile-bar'
-				});
-			});
-		</script>
-	</head>
-    <body>
-  <header>
-			<nav id="mobile-bar"></nav>
-			
-			<nav id="main-nav">
-			<ul id="menulinks"></ul>	
-				
-			</nav>
-			
-			<nav id="secondary-nav">
-				
-			</nav>
-			</header>
-		<section>
-			</section>
-		
-		<footer>
-			</footer>
-	
-</div>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Json App</title>
+ <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="custom-fonts/fonts.css" rel="stylesheet">
+    <!-- Left Sliding Menu -->
+    <link type="text/css" rel="stylesheet" href="css/mmenu.css" />
 
-  <script type="text/javascript">
+    <style type="text/css">
+      body {
+        padding: 0px;
+        padding: 0px;
+	
+      }
+      .whiteclr
+      {color: white;
+      }
+      #linkcontent
+      {margin: 5%;}
+    </style>
+   
+    </head>
+    <body>
+        
+           
+    <div id="page">
+      <div id="content">
+        <section id="top">
+          <div class="row-fluid black-box">
+            <div class="container">
+              <div class="pull-center">
+             
+                <div class="menu-btn">
+                <a id="m" href="#menu" class="menu-btn"><img src="img/menu-btn.png"></a></p>
+              </div>
+                
+              </div>
+              
+            </div>
+          </div>
+        </section>
+	  <div id="linkcontent" style="color: white;" >
+	hjyghjghjghjgh
+     </div>
+      </div>
+      <nav id="menu">
+        
+      </nav>
+   
+   
+   
+<script type="text/javascript" src="js/jquery.js"></script>  
+
+>
+
+<!--left slider menu-->
+<script type="text/javascript" src="js/jquery.mmenu.min.js"></script>
+<script type="text/javascript">
+  $(function() {
+    $('nav#menu').mmenu();
+  });
+</script>
+<!--left slider menu-->
+
+  <script>
   
     $(document).ready(function()
     {
-	
+	$( "#m" ).click();
 	    $.ajax({
 	     type: 'GET',
 	     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
@@ -96,15 +114,12 @@
 			       }
 			       
 			}
-			$("#menulinks").html(items.join( "" ));
-		   
-		 
+		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
 		    	$(".link").click(function(e){
-			    alert("click");
     e.preventDefault();
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
-    $(".link").css("color", "black");
+    $(".link").css("color", "white");
 $( this ).css( "color", "red" );
 
 $.ajax({
@@ -113,13 +128,11 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-alert(data);
- $( "section").html(data);
+
+ $( "#linkcontent").html(data);
 }
 ,
-   error:function(obj,textstatus,errorthrown){
-    alert("Error:"+textstatus+" "+errorthrown);
-    }, 
+    
     async: true
 });
     //do the update
@@ -141,9 +154,6 @@ alert(data);
 
 
   </script>
-
-
-
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
