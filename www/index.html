@@ -28,16 +28,21 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="APP TITLE">
-        
+        <script src="js/jquery.js"></script>
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+		    <script type="text/css">#build-menu-button{
+			background-image:url('');
+			
+			}</script>
+		
 		<script src="js/jquery.mobile-menu.js"></script>
 		<script>
 			$(function(){
 				$("body").mobile_menu({
-					menu: ['#main-nav', '#secondary-nav ul'],
+					menu: ['#main-nav ul', '#secondary-nav ul'],
       		menu_width: 200,
+		button_contetnt:"",
       		prepend_button_to: '#mobile-bar'
 				});
 			});
@@ -48,7 +53,7 @@
 			<nav id="mobile-bar"></nav>
 			
 			<nav id="main-nav">
-				
+			<ul id="menulinks"></ul>	
 				
 			</nav>
 			
@@ -91,7 +96,8 @@
 			       }
 			       
 			}
-		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "#main-nav" );
+			$("#menulinks").html(items.join( "" ));
+		   
 		 
 		    	$(".link").click(function(e){
 			    alert("click");
