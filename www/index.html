@@ -85,6 +85,7 @@
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "#main-nav" );
 		 
 		    	$(".link").click(function(e){
+			    alert("click");
     e.preventDefault();
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
@@ -97,7 +98,7 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-
+alert(data);
  $( "section").html(data);
 }
 ,
