@@ -31,7 +31,7 @@
 		<script>
 			   $(function(){
 				$("body").mobile_menu({
-					menu: ['#main-nav ul'],
+					menu: ['#main-nav'],
       		menu_width: 200,
       		prepend_button_to: '#mobile-bar'
 				});
@@ -41,7 +41,7 @@
     <body>
       <header>
 			<nav id="mobile-bar"></nav>
-			
+			<a href="#" id="build-menu-button">MENU</a>
 			<nav id="main-nav">
 				
 			</nav>
@@ -55,7 +55,7 @@
 			</footer>  
            
    
-
+<script type="text/javascript" src="js/jquery.js"></script>  
 
 
 
@@ -92,7 +92,6 @@
 		 
 		    	$(".link").click(function(e){
     e.preventDefault();
-    alert("in func");
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
     $(".link").css("color", "black");
@@ -104,7 +103,7 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-alert(data);
+
  $( "section").html(data);
 }
 ,
