@@ -29,7 +29,13 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.mobile-menu.js"></script>
 		<script>
-			
+			   $(function(){
+				$("body").mobile_menu({
+					menu: ['#main-nav ul'],
+      		menu_width: 200,
+      		prepend_button_to: '#mobile-bar'
+				});
+			});
 		</script>
     </head>
     <body>
@@ -49,7 +55,7 @@
 			</footer>  
            
    
-<script type="text/javascript" src="js/jquery.js"></script>  
+
 
 
 
@@ -59,7 +65,7 @@
   
     $(document).ready(function()
     {
-	$( "#m" ).click();
+	
 	    $.ajax({
 	     type: 'GET',
 	     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
@@ -83,13 +89,7 @@
 			       
 			}
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "#main-nav" );
-		    $(function(){
-				$("body").mobile_menu({
-					menu: ['#main-nav ul'],
-      		menu_width: 200,
-      		prepend_button_to: '#mobile-bar'
-				});
-			});
+		 
 		    	$(".link").click(function(e){
     e.preventDefault();
 //this will prevent the link trying to navigate to another page
