@@ -136,7 +136,8 @@ $.ajax({
     dataType: 'html',
     success: function( data ) 
 {
-$( "#m" ).click();
+     
+
  $( "#linkcontent").html(data);
 }
 ,
@@ -144,7 +145,8 @@ $( "#m" ).click();
     async: true
 });
     //do the update
-
+$( "#m" ).click();
+$( "#linkcontent").html("<img src='img/loader.gif'></img>");
     //when update has finished, navigate to the other page
     //window.location = href;
 });
