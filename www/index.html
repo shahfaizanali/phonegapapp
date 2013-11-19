@@ -18,51 +18,53 @@
     under the License.
 -->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Json App</title>
- <link rel="stylesheet" href="css/normalize.css">
+    	<head>
+		<title></title>
+		<meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="cleartype" content="on">
+    
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="APP TITLE">
+        
+		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/styles.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.mobile-menu.js"></script>
 		<script>
 			$(function(){
 				$("body").mobile_menu({
-					menu: ['#main-nav'],
+					menu: ['#main-nav', '#secondary-nav ul'],
       		menu_width: 200,
-      		prepend_button_to: '#mobile-bar',
-		button_content:"Menu"
+      		prepend_button_to: '#mobile-bar'
 				});
-			});   
+			});
 		</script>
-    </head>
+	</head>
     <body>
-      <header>
+  <header>
 			<nav id="mobile-bar"></nav>
 			
 			<nav id="main-nav">
 				
+				
 			</nav>
 			
-			
+			<nav id="secondary-nav">
+				
+			</nav>
 			</header>
 		<section>
 			</section>
 		
 		<footer>
-			</footer>  
-           
-   
-<script type="text/javascript" src="js/jquery.js"></script>  
+			</footer>
+	
+</div>
 
-
-
-
-
-  <script>
+  <script type="text/javascript">
   
     $(document).ready(function()
     {
@@ -133,6 +135,9 @@ alert(data);
 
 
   </script>
+
+
+
         </div>
         <script type="text/javascript" src="phonegap.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
