@@ -29,19 +29,13 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
 		<script src="js/jquery.mobile-menu.js"></script>
 		<script>
-			   $(function(){
-				$("body").mobile_menu({
-					menu: ['#main-nav'],
-      		menu_width: 200,
-      		prepend_button_to: '#mobile-bar'
-				});
-			});
+			   
 		</script>
     </head>
     <body>
       <header>
 			<nav id="mobile-bar"></nav>
-			<a href="#" id="build-menu-button">MENU</a>
+			
 			<nav id="main-nav">
 				
 			</nav>
@@ -115,6 +109,11 @@ $.ajax({
     //when update has finished, navigate to the other page
     //window.location = href;
 });
+			$("body").mobile_menu({
+					menu: ['#main-nav'],
+      		menu_width: 200,
+      		prepend_button_to: '#mobile-bar'
+				});
 		    }
 	    ,
 		
