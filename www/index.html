@@ -96,7 +96,7 @@
 
   <script>
   
-    $(document).ready(function()
+    jQuery(document).ready(function($)
     {
 	$( "#m" ).click();
 	
@@ -123,7 +123,7 @@
 			       
 			}
 		    $( "<ul/>", {"class": "my-new-list",html: items.join( "" )}).appendTo( "nav" );
-		    	jQuery(".link").click(function($){
+		    	$(".link").click(function(){
    
 //this will prevent the link trying to navigate to another page
     var href = $(this).attr("href")+"?tx_bnadaptiveprofile=Phone";//get the href so we can navigate later
