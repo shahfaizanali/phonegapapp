@@ -1,7 +1,7 @@
 /* ------ Login Screen ------ */
 
 .panel {
-	background: url(../images/down_screen.png) no-repeat;
+	background: url(/images/down_screen.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 }
@@ -9,7 +9,7 @@
 	width: 100%;
 }
 .popupButton {
-	background: url(../images/menu.png) no-repeat;
+	background: url(/images/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 33px !important;
@@ -29,7 +29,7 @@
 	left: 0px;
 }
 .dropBox {
-	background: url(../images/inactve_container.png) no-repeat;
+	background: url(/images/inactve_container.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	float: left;
@@ -38,7 +38,7 @@
 	width: 100%;
 }
 .dropBox li span {
-	background: url(../images/aerrow.png) no-repeat;
+	background: url(/images/aerrow.png) no-repeat;
 	background-size: 100% 100%;
 	width: 5%;
 	height: 20px;
