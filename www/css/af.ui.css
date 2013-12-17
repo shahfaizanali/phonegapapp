@@ -1428,7 +1428,7 @@ body {
 }
 
 
-/*/plugins/css/af.actionsheet.css*/
+/*plugins/css/af.actionsheet.css*/
 
 #af_actionsheet {
     position:absolute;
@@ -1490,7 +1490,7 @@ body {
 }
 
 
-/*/plugins/css/af.popup.css*/
+/*plugins/css/af.popup.css*/
 
 
 BODY>DIV#mask{
@@ -1574,7 +1574,7 @@ color:inherit;
 }
 
 
-/*/plugins/css/af.scroller.css*/
+/*plugins/css/af.scroller.css*/
 
 /** This can be your default scrollbar class.  You must use !important to override the default inline styles */
 .scrollBar { 
@@ -1588,7 +1588,7 @@ color:inherit;
 }
 
 
-/*/plugins/css/af.selectbox.css*/
+/*plugins/css/af.selectbox.css*/
 
 	#afSelectBoxContainer {
 		position:absolute;

@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* CSS Document */
 .popupButton {
-	background: url(/images/menu.png) no-repeat;
+	background: url(img/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 11% !important;
 	height: 49px !important;
@@ -17,7 +17,7 @@
 	font-size: 30px !important;
 }
 .popupButton {
-	background: url(/images/menu.png) no-repeat;
+	background: url(img/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 49px !important;
@@ -34,7 +34,7 @@
 	right:99px;
 }
 .dropBox {
-	background: url(/images/inactve_container.png) no-repeat;
+	background: url(img/inactve_container.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	float: left;
@@ -43,7 +43,7 @@
 	width: 100%;
 }
 .dropBox li span {
-	background: url(/images/aerrow.png) no-repeat;
+	background: url(img/aerrow.png) no-repeat;
 	background-size: 100% 100%;
 	width: 5%;
 	height: 32px;
