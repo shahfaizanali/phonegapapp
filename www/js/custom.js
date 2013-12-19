@@ -1,5 +1,14 @@
 // general vars
 var tapEvent = 'click'; // tap event click
+jQuery.ui.ready(function($){
+	// Navigating pages without services
+	$('.log').bind(tapEvent,function(){
+		var clickID	= $(this).attr('id');
+		var movePages =clickID+'Page';
+		$.ui.loadContent(movePages,false,false,'slide');
+	});
+	
+});
 
   jQuery(document).ready(function($) {
       
