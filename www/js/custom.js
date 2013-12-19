@@ -8,22 +8,22 @@ var tapEvent = 'click'; // tap event click
                     url: "http://test3.uscommunities.org/index.php?id=729",
                     dataType: 'json',
                     success: function(data)
-                    {alert("success");
+                    {
                         var items = [];
                         for (i in data)
                         {
-                            items.push("<li class='link' id='" + i + "' href='" + data[i].url + "'>" + data[i].title + "</li>");
+                            items.push("<li  id='" + i + "' href='" + data[i].url + "'>" + data[i].title + "</li>");
                             if (data[i].subpages.length != 0)
                             {
                                 for (j in data[i].subpages)
                                 {
-                                    items.push("<li class='link' style='margin-left:3%;' id='" + i + j + "' href='" + data[i].subpages[j].url + "'>- " + data[i].subpages[j].title + "</li>");
+                                    items.push("<li  id='" + i + j + "' href='" + data[i].subpages[j].url + "'>- " + data[i].subpages[j].title + "</li>");
                                 }
                             }
 
                         }
                         $(".dropBox").html(items.join(""));
-                            $(".link").click(function() {
+                            $(".dropBox li").click(function() {
                             var href = $(this).attr("href") + "?tx_bnadaptiveprofile=Phone"; 
                             $.ajax({
                                 type: 'GET',
