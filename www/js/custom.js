@@ -1,7 +1,8 @@
 // general vars
 var tapEvent = 'click'; // tap event click
 
-  jQuery(document).ready(function($) {
+  $(document).ready(function() {
+      alert("dsjadna");
                 $.ajax({
                     type: 'GET',
                     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
