@@ -1,7 +1,7 @@
 // general vars
 var tapEvent = 'click'; // tap event click
 
-  $(document).ready(function() {
+  jQuery(document).ready(function($) {
       
                 $.ajax({
                     type: 'GET',
