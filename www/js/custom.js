@@ -2,9 +2,7 @@
 var tapEvent = 'click'; // tap event click
 
   jQuery(document).ready(function($) {
-
-                 alert("sdfsf");
-                 $.ajax({
+                $.ajax({
                     type: 'GET',
                     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
                     dataType: 'json',
@@ -16,12 +14,10 @@ var tapEvent = 'click'; // tap event click
                             items.push("<li class='link' id='" + i + "' href='" + data[i].url + "'>" + data[i].title + "</li>");
                             if (data[i].subpages.length != 0)
                             {
-
                                 for (j in data[i].subpages)
                                 {
                                     items.push("<li class='link' style='margin-left:3%;' id='" + i + j + "' href='" + data[i].subpages[j].url + "'>- " + data[i].subpages[j].title + "</li>");
                                 }
-
                             }
 
                         }
@@ -39,7 +35,6 @@ var tapEvent = 'click'; // tap event click
                                 
                             });
                         });
-    
                     }
             }
                 );
