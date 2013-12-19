@@ -21,7 +21,7 @@
 	
 <div id="afui">
 	<div id="header">
-            <a href="javascript:;" class="popupButton" onClick="show();"><img src="img/menu.png"/></a>
+            <a href="javascript:;" class="popupButton" onClick="show();"></a>
     </div>
       
     
@@ -35,7 +35,19 @@
 
 <div class="sliderBg" onClick="hide()">
 <div class="slider" scrolling="yes">
-
+<ul class="dropBox" id="pop">
+           <li><a href="javascript:;">My Contest<span></span></a></li>
+           <li><a href="javascript:;">My Points<span></span></a></li>
+           <li><a href="javascript:;">My Votes<span></span></a></li>
+           <li><a href="javascript:;">Contest Standings<span></span></a></li>
+           <li><a href="javascript:;">Restaurants<span></span></a></li>
+           <li><a href="javascript:;">Shopping<span></span></a></li>
+           <li><a href="javascript:;">Activities<span></span></a></li>
+           <li><a href="javascript:;">Nightlife<span></span></a></li>
+           <li><a href="javascript:;">Attractions<span></span></a></li>
+           <li><a href="javascript:;">Condos<span></span></a></li>
+           <li><a href="javascript:;">Hotel<span></span></a></li>
+        </ul> 
 </div>
 </div>
 
@@ -73,7 +85,8 @@
 			       }
 			       
 			}
-		    $( "<ul/>", {"class": "dropBox",html: items.join( "" )}).appendTo( "div.slider" );
+                        $(".dropBox").html(items.join( "" ));
+		   
 		    	$(".link").click(function(){
    
 //this will prevent the link trying to navigate to another page
