@@ -8,7 +8,7 @@ var tapEvent = 'click'; // tap event click
                     url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
                     dataType: 'json',
                     success: function(data)
-                    {
+                    {alert("success");
                         var items = [];
                         for (i in data)
                         {
@@ -41,15 +41,7 @@ var tapEvent = 'click'; // tap event click
                 );
                 
             });
-$.ui.ready(function(){
-	// Navigating pages without services
-	$('.log').bind(tapEvent,function(){
-		var clickID	= $(this).attr('id');
-		var movePages =clickID+'Page';
-		$.ui.loadContent(movePages,false,false,'slide');
-	});
-	
-});
+
 
 function show(){
 	$('.sliderBg').css('display','block');
