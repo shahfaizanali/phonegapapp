@@ -2,10 +2,10 @@
 var tapEvent = 'click'; // tap event click
 
   $(document).ready(function() {
-      alert("dsjadna");
+      
                 $.ajax({
                     type: 'GET',
-                    url: "http://test3.uscommunities.org/index.php?id=729&type=1383156157",
+                    url: "http://test3.uscommunities.org/index.php?id=729",
                     dataType: 'json',
                     success: function(data)
                     {alert("success");
