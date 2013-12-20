@@ -38,13 +38,21 @@ $('#sliderScreen').toggle();});
                         items.push(" <br clear='all'>");
                         $("#sliderScreen .dropBox").html(items.join(""));
                             $(".dropBox li").click(function() {
-                            var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone";
+                            var href = $(this).attr("href") + "?tx_bnadaptiveprofile=Phone";
+//			    $("#content").load(href,function(){$('popupButton').click();});
+			    $("#main").html('<object style="width:100%; height:100%;" data="'+href+'">');
+                           $('.popupButton').click();
+                        });
+                            $(".slider .dropBox li").click(function() {
+                            var href = $(this).attr("href") + "?tx_bnadaptiveprofile=Phone";
 //			    $("#content").load(href,function(){$('popupButton').click();});
 			    $("#main").html('<object style="width:100%; height:100%;" data="'+href+'">');
                            
+                            $('#backButton').click();
+                            $('.popupButton').click();
                             
-                            $(this).parent().parent().parent().hide();
-                            $('#sliderScreen').toggle();
+                            
+                           
                         });
                     }
             }
