@@ -3,12 +3,12 @@
 
 .panel{background:#005D8E;}
 #main {
-	background: url(../images/down_screen.png) no-repeat;
+	background: url(../img/down_screen.png) no-repeat;
 	background-size: 100% 100%;
 }
 #afui #backButton {
 	color: transparent;
-	background: url(../images/menu.png) no-repeat;
+	background: url(../img/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 33px !important;
@@ -18,7 +18,7 @@
 
 #customHeader {height:44px;}
 .popupButton {
-	background: url(../images/menu.png) no-repeat;
+	background: url(../img/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 33px !important;
@@ -41,7 +41,7 @@
 	left: 0px;
 }
 .dropBox {
-	background: url(../images/inactve_container.png) no-repeat;
+	background: url(../img/inactve_container.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	float: left;
@@ -52,7 +52,7 @@
 	border-bottom: 1px solid #6cd9ff;
 }
 .arrow {
-	background: url(../images/aerrow.png) no-repeat !important;
+	background: url(../img/aerrow.png) no-repeat !important;
 	background-size: 100% 100% !important;
 	width: 5% !important;
 	height: 20px !important;
