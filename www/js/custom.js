@@ -42,6 +42,8 @@ $('#sliderScreen').toggle();});
 //			    $("#content").load(href,function(){$('popupButton').click();});
 			    $("#main").html('<object style="width:100%; height:100%;" data="'+href+'">');
                            
+                            
+                            $(this).parent().parent().parent().hide();
                             $('#sliderScreen').toggle();
                         });
                     }
