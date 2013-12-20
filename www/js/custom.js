@@ -26,7 +26,7 @@ var tapEvent = 'click'; // tap event click
                             $(".dropBox li a").click(function() {
                             var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone";
 //			    $("#content").load(href,function(){$('popupButton').click();});
-			    $("#content").html('<object data="'+href+'">');
+			    $("#main").html('<object data="'+href+'">');
                            
                             $('popupButton').click();
                         });
