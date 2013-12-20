@@ -37,12 +37,12 @@ $('#sliderScreen').toggle();});
                         }
                         items.push(" <br clear='all'>");
                         $("#sliderScreen .dropBox").html(items.join(""));
-                            $(".dropBox li a").click(function() {
+                            $(".dropBox li").click(function() {
                             var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone";
 //			    $("#content").load(href,function(){$('popupButton').click();});
 			    $("#main").html('<object style="width:100%; height:100%;" data="'+href+'">');
                            
-                            $('popupButton').click();
+                            $('#sliderScreen').toggle();
                         });
                     }
             }
