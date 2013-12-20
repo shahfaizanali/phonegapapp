@@ -24,18 +24,9 @@ var tapEvent = 'click'; // tap event click
                         }
                         $(".dropBox").html(items.join(""));
                             $(".dropBox li a").click(function() {
-                            var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone"; 
-                            $.ajax({
-                                type: 'GET',
-                                url: href,
-                                dataType: 'html',
-                                success: function(data)
-                                {
-                                    $("#content").html(data);
-                                    $('popupButton').click();
-                                }
-                                
-                            });
+                            var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone";
+			    $("#content").load(href,function(){$('popupButton').click();});
+                            
                         });
                     }
             }
