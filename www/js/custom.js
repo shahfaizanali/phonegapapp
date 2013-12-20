@@ -1,14 +1,9 @@
 // general vars
 var tapEvent = 'click'; // tap event click
-$.ui.ready(function(){
-	// Navigating pages without services
-	$('.popupButton').bind(tapEvent,function(){
-		$.ui.loadContent('sliderScreen',false,false,'slide');
-	});
-	
-});
+
   jQuery(document).ready(function($) {
-      
+      $('.popupButton').click(function(){
+$('#sliderScreen').toggle();});
                 $.ajax({
                     type: 'GET',
                     url: "http://test3.uscommunities.org/index.php?id=729",
