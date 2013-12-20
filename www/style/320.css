@@ -30,20 +30,18 @@
 }
 .dropBox li {
 	width: 100%;
-	border-bottom: 1px solid #6cd9ff;
 }
-.arrow {
-	background: url(../img/aerrow.png) no-repeat !important;
-	background-size: 100% 100% !important;
-	width: 5% !important;
-	height: 20px !important;
-	float: right !important;
-	margin: 2% 2%;
+.dropBox li span {
+	background: url(../img/aerrow.png) no-repeat;
+	background-size: 100% 100%;
+	width: 5%;
+	height: 20px;
+	float: right;
 }
 .dropBox li a {
 	color: white;
-	width: 90%;
+	width: 100%;
 	padding: 4% 4%;
 	float: left;
-
+	border-bottom: 1px solid #6cd9ff;
 }

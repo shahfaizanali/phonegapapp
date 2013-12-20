@@ -1,16 +1,5 @@
 @charset "utf-8";
 /* CSS Document */
-#afui #backButton {
-	color: transparent;
-	background: url(../img/menu.png) no-repeat;
-	background-size: 100% 100%;
-	width: 12% !important;
-	height: 48px !important;
-	top: 6px !important;
-	left: 7px;
-}
-
-#customHeader {height:44px;}
 .panel{background:#005D8E;}
 .popupButton {
 	background: url(../img/menu.png) no-repeat;
@@ -41,7 +30,7 @@
 
 .slider {
 	position: absolute;
-	width: 100%;
+	width: 86%;
 	top: 6px;
 	right:99px;
 }
@@ -53,22 +42,19 @@
 }
 .dropBox li {
 	width: 100%;
-		border-bottom: 1px solid #6cd9ff;
 }
-.arrow {
-	background: url(../img/aerrow.png) no-repeat !important;
-	background-size: 100% 100% !important;
-	width: 5% !important;
-	height: 33px !important;
-	float: right !important;
-	padding:0 !important;
-	margin: 4% 2%;
+.dropBox li span {
+	background: url(../img/aerrow.png) no-repeat;
+	background-size: 100% 100%;
+	width: 5%;
+	height: 32px;
+	float: right;
 }
 .dropBox li a {
 	color: white;
-	width: 80%;
+	width: 100%;
 	padding: 4% 4%;
 	float: left;
-
+	border-bottom: 1px solid #6cd9ff;
 	font-size: 24px;
 }
