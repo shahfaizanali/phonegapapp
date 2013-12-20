@@ -5,57 +5,71 @@
 <title>New project</title>
 <link href="style/af.ui.css" type="text/css" rel="stylesheet">
 <link href="style/style.css" type="text/css" rel="stylesheet">
-<link href="style/index.css" type="text/css" rel="stylesheet">
 <link href="style/320.css" rel="stylesheet" type="text/css"  media="only screen and (min-width:320px) and (-webkit-min-device-pixel-ratio:2)">
 <link href="style/360.css" rel="stylesheet" type="text/css"  media="only screen and (min-width:360px) and (-webkit-min-device-pixel-ratio:2)">
 <link href="style/480.css" type="text/css" rel="stylesheet" media="only screen and (min-width:480px)">
 <link href="style/760.css" type="text/css" rel="stylesheet" media="only screen and (min-width:760px)">
+<script src="js/jquery.js" type="text/javascript"></script>
 <script src="js/appframework.ui.min.js" type="text/javascript"></script>
-<script type="text/javascript" src="js/jquery.js"></script>  
 <script src="js/custom.js" type="text/javascript"></script>
-
 
 </head>
 
 <body>
-	
+
+<!--afui-->	
 <div id="afui">
 	<div id="header">
-     <a href="javascript:;" class="popupButton" onClick="show();"></a>
+     <a href="javascript:;" class="popupButton"></a>
     </div>
-      
-    
-    
+    <div id="customHeader">
+    	 <a id="backButton" class="button" style="visibility: visible;"></a>
+         <h1>U.S. COMMUNITIES</h1>
+    </div>
+   
+   <!--content-->   
     <div id="content">
+    
     	<div id="main" class="panel" scrolling="no" title="U.S. COMMUNITIES" data-footer="none">
         </div>
+        <!--slider-->
+        <div id="sliderScreen" class="panel" scrolling="yes" data-footer="none" data-header="customHeader">
+ 
+		  <ul class="dropBox">
+           <li><a href="javascript:;">My Contest</a><a href="#sliderScreen2" class="arrow"></a></li>
+           <li><a href="javascript:;">My Points</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <li><a href="javascript:;">My Votes</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <li><a href="javascript:;">Contest Standings</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <li><a href="javascript:;">Restaurants</a><a href="#sliderScreen2" class="arrow"></a></li>
+           <li><a href="javascript:;">Shopping</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <li><a href="javascript:;">Activities</a><a href="#sliderScreen2" class="arrow"></a></li>
+           <li><a href="javascript:;">Nightlife</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <li><a href="javascript:;">Attractions</a><a href="#sliderScreen2" class="arrow"></a></a></li>
+           <br clear="all">
+         </ul>
+        <br clear="all">
+	</div>
+
         
+        <!--slider2-->
+        <div id="sliderScreen2" class="panel" scrolling="yes" data-footer="none" data-header="customHeader">
+         <div class="slider">
+		  <ul class="dropBox">
+           <li><a href="javascript:;">My Contest</a></li>
+           <li><a href="javascript:;">My Points</a></li>
+           <li><a href="javascript:;">My Votes</a></li>
+           <li><a href="javascript:;">Contest Standings</a></li>
+          <br class="all">
+         </ul> 
+        <br class="all">
+     	</div>
+          <br class="all">    
+        </div>
+    
     </div>
+    
     <div id="navbar"></div>
 
-<div class="sliderBg" onClick="hide()">
-<div class="slider" scrolling="yes">
-<ul class="dropBox" id="pop">
-           <li><a href="javascript:;">My Contest<span></span></a></li>
-           <li><a href="javascript:;">My Points<span></span></a></li>
-           <li><a href="javascript:;">My Votes<span></span></a></li>
-           <li><a href="javascript:;">Contest Standings<span></span></a></li>
-           <li><a href="javascript:;">Restaurants<span></span></a></li>
-           <li><a href="javascript:;">Shopping<span></span></a></li>
-           <li><a href="javascript:;">Activities<span></span></a></li>
-           <li><a href="javascript:;">Nightlife<span></span></a></li>
-           <li><a href="javascript:;">Attractions<span></span></a></li>
-           <li><a href="javascript:;">Condos<span></span></a></li>
-           <li><a href="javascript:;">Hotel<span></span></a></li>
-        </ul> 
 </div>
-</div>
-
-</div>
-      <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-                app.initialize();
-        </script>
 </body>
 </html>

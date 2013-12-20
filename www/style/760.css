@@ -1,7 +1,19 @@
 @charset "utf-8";
 /* CSS Document */
+#afui #backButton {
+	color: transparent;
+	background: url(../images/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 12% !important;
+	height: 48px !important;
+	top: 6px !important;
+	left: 7px;
+}
+
+#customHeader {height:44px;}
+.panel{background:#005D8E;}
 .popupButton {
-	background: url(../img/menu.png) no-repeat;
+	background: url(../images/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 11% !important;
 	height: 49px !important;
@@ -17,7 +29,7 @@
 	font-size: 30px !important;
 }
 .popupButton {
-	background: url(../img/menu.png) no-repeat;
+	background: url(../images/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 49px !important;
@@ -29,31 +41,34 @@
 
 .slider {
 	position: absolute;
-	width: 86%;
+	width: 100%;
 	top: 6px;
 	right:99px;
 }
 .dropBox {
-	background: url(../img/inactve_container.png) no-repeat;
+	background: url(../images/inactve_container.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	float: left;
 }
 .dropBox li {
 	width: 100%;
+		border-bottom: 1px solid #6cd9ff;
 }
-.dropBox li span {
-	background: url(../img/aerrow.png) no-repeat;
-	background-size: 100% 100%;
-	width: 5%;
-	height: 32px;
-	float: right;
+.arrow {
+	background: url(../images/aerrow.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	width: 5% !important;
+	height: 33px !important;
+	float: right !important;
+	padding:0 !important;
+	margin: 4% 2%;
 }
 .dropBox li a {
 	color: white;
-	width: 100%;
+	width: 80%;
 	padding: 4% 4%;
 	float: left;
-	border-bottom: 1px solid #6cd9ff;
+
 	font-size: 24px;
 }

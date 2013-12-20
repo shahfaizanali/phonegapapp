@@ -1,15 +1,24 @@
 /* ------ Login Screen ------ */
 
-.panel {
-	background: url(../img/down_screen.png) no-repeat;
+
+.panel{background:#005D8E;}
+#main {
+	background: url(../images/down_screen.png) no-repeat;
 	background-size: 100% 100%;
-	width: 100%;
 }
-.main {
-	width: 100%;
+#afui #backButton {
+	color: transparent;
+	background: url(../images/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 12% !important;
+	height: 33px !important;
+	top: 6px !important;
+	left: 7px;
 }
+
+#customHeader {height:44px;}
 .popupButton {
-	background: url(../img/menu.png) no-repeat;
+	background: url(../images/menu.png) no-repeat;
 	background-size: 100% 100%;
 	width: 12% !important;
 	height: 33px !important;
@@ -17,37 +26,43 @@
 	top: 6px !important;
 	right: 7px;
 }
-
-.sliderBg {position:relative; width:100%; height:100%; display: none; z-index: 500;}
-
+.sliderBg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 500;
+}
 .slider {
 	position: absolute;
 	width: 86%;
 	top: 6px;
-	right:0;
-		
+	right: 0;
 	left: 0px;
 }
 .dropBox {
-	background: url(../img/inactve_container.png) no-repeat;
+	background: url(../images/inactve_container.png) no-repeat;
 	background-size: 100% 100%;
 	width: 100%;
 	float: left;
 }
 .dropBox li {
 	width: 100%;
+	float:left;
+	border-bottom: 1px solid #6cd9ff;
 }
-.dropBox li span {
-	background: url(../img/aerrow.png) no-repeat;
-	background-size: 100% 100%;
-	width: 5%;
-	height: 20px;
-	float: right;
+.arrow {
+	background: url(../images/aerrow.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	width: 5% !important;
+	height: 20px !important;
+	float: right !important;
+	padding:0 !important;
 }
 .dropBox li a {
 	color: white;
-	width: 100%;
+	width: 90%;
 	padding: 5% 4%;
 	float: left;
-	border-bottom: 1px solid #6cd9ff;
+	
 }
