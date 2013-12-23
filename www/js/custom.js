@@ -47,24 +47,12 @@ $(document).ready(function() {
 
             $('.sublinks_li').on('click', function() {
                 alert($(this).attr("href"));
-                $("#main").load($(this).attr("href"), function() {
-                    alert("sdfsdfsdfsdfsdfdsf");
+                $.get($(this).attr("href"), function(data) {
+                    alert("Load was performed.");
+                    $("#main").html(data);
                     $("#backButton").click();
                     $("#backButton").click();
                 });
-
-//                $.ajax({
-//                    type: 'GET',
-//                    url: $(this).attr("href"),
-//                    dataType: 'html',
-//                    success: function(data)
-//                    {
-//                        alert(data)
-//                        $("#main").html(data);
-//                        $("#backButton").click();
-//                        $("#backButton").click();
-//                    }
-//                });
             });
         }
     });
