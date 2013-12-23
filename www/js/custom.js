@@ -46,9 +46,7 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
-                alert($(this).attr("href"));
                 $.get($(this).attr("href"), function(data) {
-                    alert("Load was performed.");
                     $("#main").html(data);
                     $("#backButton").click();
                     $("#backButton").click();
