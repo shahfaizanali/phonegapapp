@@ -33,8 +33,8 @@ $(document).ready(function() {
                 {
                     for (j in data[i].subpages)
                     {
-                        sublinkli.push('<li onclick="li_load_data()" href=' + data[i].subpages[j].url.replace("www.", "test3.")+ "?tx_bnadaptiveprofile=Phone" + ' > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >')
-                        alert('<li onclick="li_load_data()" href=' + data[i].subpages[j].url.replace("www.", "test3.")+ "?tx_bnadaptiveprofile=Phone" + ' > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >')
+                        sublinkli.push('<li onclick="li_load_data()" href="' + data[i].subpages[j].url.replace("www.", "test3.")+ "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >')
+                        alert('<li onclick="li_load_data()" href="' + data[i].subpages[j].url.replace("www.", "test3.")+ "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >')
                     }
                     sublinksul.push('<div id="sliderScreen' + i + '" class="panel" scrolling="yes" data-footer="none" data-header="customHeader"><div class="slider"><ul class="dropBox sublinks">' + sublinkli.join("") + '<br class="all"></ul><br class="all"></div><br class="all"></div>')
                 }
