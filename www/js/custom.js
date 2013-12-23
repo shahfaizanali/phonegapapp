@@ -45,26 +45,26 @@ $(document).ready(function() {
                 $(".links").append(lis.join(""))
             }
 
-            $(document).on('click', '.sublinks_li', function(e) {
+            $('.sublinks_li').on('click', function() {
                 alert($(this).attr("href"));
-//                $("#main").load($(this).attr("href"), function() {
-//                alert("sdfsdfsdfsdfsdfdsf");
-//                    $("#backButton").click();
-//                    $("#backButton").click();
-//                });
-
-                $.ajax({
-                    type: 'GET',
-                    url: $(this).attr("href"),
-                    dataType: 'html',
-                    success: function(data)
-                    {
-                        alert(data)
-                        $("#main").html(data);
-                        $("#backButton").click();
-                        $("#backButton").click();
-                    }
+                $("#main").load($(this).attr("href"), function() {
+                    alert("sdfsdfsdfsdfsdfdsf");
+                    $("#backButton").click();
+                    $("#backButton").click();
                 });
+
+//                $.ajax({
+//                    type: 'GET',
+//                    url: $(this).attr("href"),
+//                    dataType: 'html',
+//                    success: function(data)
+//                    {
+//                        alert(data)
+//                        $("#main").html(data);
+//                        $("#backButton").click();
+//                        $("#backButton").click();
+//                    }
+//                });
             });
         }
     });
