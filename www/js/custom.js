@@ -46,11 +46,24 @@ $(document).ready(function() {
             }
 
             $(document).on('click', '.sublinks_li', function(e) {
-                alert($(this).attr("href"));
-                $("#main").load($(this).attr("href"), function() {
-                alert("sdfsdfsdfsdfsdfdsf");
-                    $("#backButton").click();
-                    $("#backButton").click();
+//                alert($(this).attr("href"));
+//                $("#main").load($(this).attr("href"), function() {
+//                alert("sdfsdfsdfsdfsdfdsf");
+//                    $("#backButton").click();
+//                    $("#backButton").click();
+//                });
+
+                $.ajax({
+                    type: 'GET',
+                    url: $(this).attr("href"),
+                    dataType: 'html',
+                    success: function(data)
+                    {
+                        alert(data)
+                        $("#main").html(data);
+                        $("#backButton").click();
+                        $("#backButton").click();
+                    }
                 });
             });
         }
