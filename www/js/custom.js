@@ -1,47 +1,51 @@
+/* 
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+
 // general vars
 var tapEvent = 'click'; // tap event click
 
-  jQuery(document).ready(function($) {
-   
-                $.ajax({
-                    type: 'GET',
-                    url: "http://test3.uscommunities.org/index.php?id=729",
-                    dataType: 'json',
-                    success: function(data)
+
+$.ui.ready(function() {
+// Navigating pages without services
+    $('.popupButton').bind(tapEvent, function() {
+        $.ui.loadContent('sliderScreen', false, false, 'slide');
+    });
+});
+
+
+$(document).ready(function() {
+    $.ajax({
+        type: 'GET',
+        url: "http://test3.uscommunities.org/index.php?id=729",
+        dataType: 'json',
+        success: function(data)
+        {
+            var sublinksul = [];
+            var sublinkli = [];
+            var lis = [];
+            for (i in data)
+            {
+                lis.push('<li><a href="#sliderScreen' + i + '">' + data[i].title + '<span></span></a></li>')
+                if (data[i].subpages.length != 0)
+                {
+                    for (j in data[i].subpages)
                     {
-                        var items = [];
-                        for (i in data)
-                        {
-                            items.push("<li  id='" + i + "' href='" + data[i].url + "'>" +"<a href='##'>"+ data[i].title +"<span></span></a>" + "</li>");
-                            if (data[i].subpages.length != 0)
-                            {
-                                for (j in data[i].subpages)
-                                {
-                                    items.push("<li style='margin-left:4px;'  id='" + i + j + "' href='" + data[i].subpages[j].url + "'>- " + "<a href='##'>"+ data[i].subpages[j].title +"<span></span></a>" + "</li>");
-                                }
-                            }
-
-                        }
-                        $(".dropBox").html(items.join(""));
-                            $(".dropBox li a").click(function() {
-                            var href = $(this).parent().attr("href") + "?tx_bnadaptiveprofile=Phone";
-			    $("#content").load(href,function(){$('popupButton').click();});
-//			    $("#content").html(href);
-                           
-                            $('popupButton').click();
-                        });
+                        sublinkli.push('<li onclick="("#main").load($(this).attr("href"),function(){ $("#backButton").click();$("#backButton").click();})" href=' + data[i].subpages[j].url.replace("www.", "test3.")+ "?tx_bnadaptiveprofile=Phone" + ' > <a href="javascript:;" > ' + data[i].subpages[j].title + ' < /a></li >')
                     }
+                    sublinksul.push('<div id="sliderScreen' + i + '" class="panel" scrolling="yes" data-footer="none" data-header="customHeader"><div class="slider"><ul class="dropBox sublinks">' + sublinkli.join("") + '<br class="all"></ul><br class="all"></div><br class="all"></div>')
+                }
+                if (sublinksul.length != 0) {
+                    $("#submenu").append(sublinksul.join(""))
+                }
             }
-                );
-                
-            });
+            if (lis.length != 0) {
+                $(".links").append(lis.join(""))
+            }
 
-
-function show(){
-	$('.sliderBg').css('display','block');
-	}
-
-function hide(){
-	$('.sliderBg').css('display','none');
-	}
-	
+        }
+    });
+});
+      
