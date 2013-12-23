@@ -46,7 +46,7 @@ $(document).ready(function() {
             }
 
             $(document).on('click', '.sublinks_li', function(e) {
-//                alert($(this).attr("href"));
+                alert($(this).attr("href"));
 //                $("#main").load($(this).attr("href"), function() {
 //                alert("sdfsdfsdfsdfsdfdsf");
 //                    $("#backButton").click();
