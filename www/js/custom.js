@@ -46,11 +46,8 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
-                $.get($(this).attr("href"), function(data) {
-                    $("#main").html(data);
-                    $("#backButton").click();
-                    $("#backButton").click();
-                });
+                $("#content_iframe").attr('src', $(this).attr("href"))
+                $.ui.loadContent("main",false,false,"slide");
             });
         }
     });
