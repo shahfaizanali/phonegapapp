@@ -46,24 +46,25 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
+alert("abc")
+$(document).location.href =  $(this).attr("href");
                 //$("#content_iframe").attr('src', $(this).attr("href"))
                 //$.ui.loadContent("main",false,false,"slide");
-                   $.ajax({
-                   type: 'GET',
-                    url: $(this).attr("href"),
-                    dataType: 'html',
-                    beforeSend: function()
-                    {
-                       $("#main").html("Loading data........... please wait");
-                       $.ui.loadContent("main",false,false,"slide");
-                    },
-                    success: function(data)
-                    {
-                       alert("dataloaded");
-                       $("#main").html(data);
-                    }
+                //   $.ajax({
+                  // type: 'GET',
+                  //  url: $(this).attr("href"),
+                   // dataType: 'html',
+                   // beforeSend: function()
+                   // {
+                    //   $("#main").html("Loading data........... please wait");
+                     //  $.ui.loadContent("main",false,false,"slide");
+                    //},
+                    //success: function(data)
+                   // {
+                    //   alert("dataloaded");
+                     //  $(document).location.href =  $(this).attr("href")                 }
 
-                 });
+                 //});
 
 
             });
