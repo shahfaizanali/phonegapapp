@@ -46,8 +46,26 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
-                $("#content_iframe").attr('src', $(this).attr("href"))
-                $.ui.loadContent("main",false,false,"slide");
+                //$("#content_iframe").attr('src', $(this).attr("href"))
+                //$.ui.loadContent("main",false,false,"slide");
+                   $.ajax({
+                   type: 'GET',
+                    url: $(this).attr("href"),
+                    dataType: 'html',
+                    beforeSend: function()
+                    {
+                       $("#main").html("Loading data........... please wait");
+                       $.ui.loadContent("main",false,false,"slide");
+                    },
+                    success: function(data)
+                    {
+                       alert("dataloaded");
+                       $("#main").html(data);
+                    }
+
+                 });
+
+
             });
         }
     });
