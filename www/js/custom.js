@@ -50,6 +50,7 @@ $(document).ready(function() {
                 $("#content_iframe").attr('src', $(this).attr("href"));
 $("#content_iframe").attr('height', $(window).height());
 $("#content_iframe").attr('width', $(window).width());
+$.ui.loadContent("main",false,false,"slide");
                 //$.ui.loadContent("main",false,false,"slide");
                 //   $.ajax({
                   // type: 'GET',
