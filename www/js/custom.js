@@ -46,9 +46,10 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
-alert("abc")
-$(document).location.href =  $(this).attr("href");
-                //$("#content_iframe").attr('src', $(this).attr("href"))
+
+                $("#content_iframe").attr('src', $(this).attr("href"));
+$("#content_iframe").attr('height', $(window).height());
+$("#content_iframe").attr('width', $(window).width());
                 //$.ui.loadContent("main",false,false,"slide");
                 //   $.ajax({
                   // type: 'GET',
