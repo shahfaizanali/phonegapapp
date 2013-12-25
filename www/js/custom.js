@@ -17,6 +17,8 @@ $.ui.ready(function() {
 
 
 $(document).ready(function() {
+$("#loadImg div").height($(window).height());
+$("#loadImg div").width($(window).width());
     $.ajax({
         type: 'GET',
         url: "http://test3.uscommunities.org/index.php?id=729",
@@ -46,7 +48,7 @@ $(document).ready(function() {
             }
 
             $('.sublinks_li').on('click', function() {
-
+$("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("href"));
 $("#content_iframe").attr('height', $(window).height());
 $("#content_iframe").attr('width', $(window).width());
