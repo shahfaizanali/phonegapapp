@@ -63,3 +63,5 @@
 	float: left;
 	border-bottom: 1px solid #6cd9ff;
 }
+#loadImg{position:absolute;z-index:999;}
+#loadImg div{display:table-cell;width:320px;height:480px;background:#fff;text-align:center;vertical-align:middle;}
