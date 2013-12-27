@@ -20,7 +20,7 @@ $(document).ready(function() {
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
-$("#loadImg").show();    
+ 
     $.ajax({
         type: 'GET',
         url: "http://test3.uscommunities.org/index.php?id=729",
@@ -48,7 +48,7 @@ $("#loadImg").show();
             if (lis.length != 0) {
                 $(".links").append(lis.join(""))
             }
-$("#loadImg").hide();
+
             $('.sublinks_li').on('click', function() {
 $("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("href"));
