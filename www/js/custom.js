@@ -87,16 +87,17 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             var lis = [];
             for (i in data)
             {   
+                lis.push('<li class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a><a href="#" class="arrow"></a>');
                 if (data[i].subpages.length != 0)
                 {   
+                    
                     var sublinkli = [];
                     for (j in data[i].subpages)
                     {
                         sublinkli.push('<li class="subMenu"> <a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].subpages[j].title+'</a></li >');
                     }
-                    
+                    lis.push('<ul class="smallMenu">' + sublinkli.join("") + '</ul></li>')
                 }
-                lis.push('<li  class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a><a href="#" class="arrow"></a><ul class="smallMenu">' + sublinkli.join("") + '</ul></li>');
                 
             }
             $(".dropBox").html(lis.join(""))
