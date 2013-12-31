@@ -81,16 +81,11 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                     {
                         sublinkli.push('<li class="subMenu" href="' + data[i].subpages[j].url.replace("www.", "test3.") + "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >');
                     }
-                    sublinksul.push('<div id="sub' + i + '">' + sublinkli.join("") + '</div>')
+                    lis.push('<div id="sub' + i + '">' + sublinkli.join("") + '</div>')
                 }
-                if (sublinksul.length != 0) {
-                    lis.push(sublinksul.join(""))
-                }
+                
             }
-            if (lis.length != 0) {
-                $(".dropBox").html(lis.join(""))
-            }
-
+            $(".dropBox").html(lis.join(""))
             $('.subMenu').on('click', function() 
             {
                 $("#loadImg").show();
