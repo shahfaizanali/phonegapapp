@@ -1,5 +1,4 @@
 /* ------ Login Screen ------ */
-.panel{background:#005D8E;}
 #afui #backButton {
 	color: transparent;
 	background: url(../img/menu.png) no-repeat;
@@ -40,18 +39,24 @@
 }
 .dropBox li {
 	width: 100%;
+		border-bottom: 1px solid #6cd9ff;
 }
-.dropBox li span {
-	background: url(../img/aerrow.png) no-repeat;
-	background-size: 100% 100%;
-	width: 5%;
-	height: 20px;
-	float: right;
+.arrow {
+	background: url(../img/aerrow.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	width: 5% !important;
+	height: 20px !important;
+	float: right !important;
 }
 .dropBox li a {
 	color: white;
-	width: 100%;
+	width: 90%;
 	padding: 5% 4%;
 	float: left;
-	border-bottom: 1px solid #6cd9ff;
+
+}
+.sub{
+    
+    display:none;
+    
 }
