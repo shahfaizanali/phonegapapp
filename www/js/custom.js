@@ -73,8 +73,10 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-   var useragent = settings.getUserAgentString();
-            settings.setUserAgentString(useragent + ";USC_mobile_app_v1");
+   var useragent = navigator.userAgent;
+   navigator.__defineGetter__('userAgent', function(){
+    return useragent+";USC_mobile_app_v1"; // customized user agent
+});
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
