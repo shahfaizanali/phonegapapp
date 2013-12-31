@@ -22,6 +22,7 @@ $.ui.ready(function(){
 	
 	$('.arrow').bind(tapEvent,function(){
 		//evt = svt.parentNode;
+                alert("fds");
 			if($(this).parent().hasClass('open')){
 			$(this).parent().removeClass('open');
 			$(this).parent().addClass('close');
