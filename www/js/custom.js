@@ -87,10 +87,9 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             var lis = [];
             for (i in data)
             {   
-                lis.push('<li href="'+data[i].url+'" class="mainMenu open"><a>'+data[i].title+'</a><a class="arrow"></a>');
+                lis.push('<li href="'+data[i].url+'" class="mainMenu open"><a href="javascript:;">'+data[i].title+'</a><a href="#" class="arrow"></a>');
                 if (data[i].subpages.length != 0)
                 {   
-                    var sublinksul = [];
                     var sublinkli = [];
                     for (j in data[i].subpages)
                     {
