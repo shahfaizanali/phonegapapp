@@ -74,15 +74,13 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-  
-   
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
     
     $.ajax({
         type: 'GET',
-        url: "http://test3.uscommunities.org/index.php?id=729",
+        url: "http://www.uscommunities.org/index.php?id=729",
         dataType: 'json',
         success: function(data)
         {
