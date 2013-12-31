@@ -72,3 +72,42 @@ function callForScroll(){
 	touchScroll("wrapper2");
 	}
 
+$(document).ready(function() {
+$("#loadImg div").height($(window).height());
+$("#loadImg div").width($(window).width());
+$("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
+    
+    $.ajax({
+        type: 'GET',
+        url: "http://test3.uscommunities.org/index.php?id=729",
+        dataType: 'json',
+        success: function(data)
+        {
+           
+            var lis = [];
+            for (i in data)
+            {   
+                if (data[i].subpages.length != 0)
+                {   
+                    var sublinkli = [];
+                    for (j in data[i].subpages)
+                    {
+                        sublinkli.push('<li class="subMenu"> <a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].subpages[j].title+'</a></li >');
+                    }
+                    
+                }
+                lis.push('<li  class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a><a href="#" class="arrow"></a><ul class="smallMenu">' + sublinkli.join("") + '</ul></li>');
+                
+            }
+            $(".dropBox").html(lis.join(""))
+            $('.link').on('click', function() 
+            {
+                $("#loadImg").show();
+                $("#content_iframe").attr('src', $(this).attr("data-url"));
+                $("#slide-menu-button").click();
+            });
+        }
+    });
+});
+
+
