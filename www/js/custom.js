@@ -20,6 +20,21 @@ $.ui.ready(function(){
         }
     };
 	
+	$('.arrow').bind(tapEvent,function(){
+		//evt = svt.parentNode;
+			if($(this).parent().hasClass('open')){
+			$(this).parent().removeClass('open');
+			$(this).parent().addClass('close');
+			$('.close ul').css('display','block');
+		}
+			else{
+			$(this).parent().removeClass('close');
+			$(this).parent().addClass('open');
+			$('.open ul').css('display','none');
+		}
+		
+	})
+	
 });
 
 	function isTouchDevice(){
@@ -71,8 +86,8 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
            
             var lis = [];
             for (i in data)
-            {
-                lis.push('<li class="mainMenu"><a href="#sliderScreen' + i + '">' + data[i].title + '</a><a onclick="$("#sub'+i+'").toggle();" class="arrow"></a></li>')
+            {   
+                lis.push('<li href="'+data[i].url+'" class="mainMenu open"><a>'+data[i].title+'</a><a class="arrow"></a></li>');
                 if (data[i].subpages.length != 0)
                 {   
                     var sublinksul = [];
@@ -81,12 +96,12 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                     {
                         sublinkli.push('<li class="subMenu" href="' + data[i].subpages[j].url.replace("www.", "test3.") + "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >');
                     }
-                    lis.push('<div class="sub" id="sub' + i + '">' + sublinkli.join("") + '</div>')
+                    lis.push(' <ul class="smallMenu">' + sublinkli.join("") + '</ul>')
                 }
                 
             }
             $(".dropBox").html(lis.join(""))
-            $('.subMenu').on('click', function() 
+            $('li').on('click', function() 
             {
                 $("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("href"));
