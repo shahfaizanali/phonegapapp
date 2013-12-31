@@ -20,21 +20,21 @@ $.ui.ready(function(){
         }
     };
 	
-	$('.arrow').bind(tapEvent,function(){
-		//evt = svt.parentNode;
-                alert("fds");
-			if($(this).parent().hasClass('open')){
-			$(this).parent().removeClass('open');
-			$(this).parent().addClass('close');
-			$('.close ul').css('display','block');
-		}
-			else{
-			$(this).parent().removeClass('close');
-			$(this).parent().addClass('open');
-			$('.open ul').css('display','none');
-		}
-		
-	})
+//	$('.arrow').bind(tapEvent,function(){
+//		//evt = svt.parentNode;
+//                alert("fds");
+//			if($(this).parent().hasClass('open')){
+//			$(this).parent().removeClass('open');
+//			$(this).parent().addClass('close');
+//			$('.close ul').css('display','block');
+//		}
+//			else{
+//			$(this).parent().removeClass('close');
+//			$(this).parent().addClass('open');
+//			$('.open ul').css('display','none');
+//		}
+//		
+//	})
 	
 });
 
@@ -78,6 +78,7 @@ $(document).ready(function() {
    navigator.__defineGetter__('userAgent', function(){
     return useragent+";USC_mobile_app_v1"; // customized user agent
 });
+  
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
@@ -100,24 +101,27 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                         sublinkli.push('<li class="subMenu"> <a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].subpages[j].title+'</a></li >');
 
                     }
-                    if(sublinkli.length>0)
-                    {
+                   
                    lis.push('<li  class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a><a href="#" class="arrow"></a><ul class="smallMenu">' + sublinkli.join("") + '</ul></li>');
-                    }
-                    else
-                    {
-                    lis.push('<li  class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a></li>');
-                    }
-            }
+                }
+                else
+                {
+                        lis.push('<li  class="mainMenu open"><a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].title+'</a></li>');
+                }
                 
             }
-            $(".dropBox").html(lis.join(""))
+            $(".dropBox").html(lis.join(""));
+              $('.arrow').on('click', function() 
+            {
+               $(this).parent().find(".smallMenu").toggle();
+            });
             $('.link').on('click', function() 
             {
                 $("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("data-url"));
                 $("#slide-menu-button").click();
             });
+        
         }
     });
 });
