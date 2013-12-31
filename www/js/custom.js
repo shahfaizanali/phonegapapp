@@ -73,6 +73,8 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
+   var useragent = settings.getUserAgentString();
+            settings.setUserAgentString(useragent + ";USC_mobile_app_v1");
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
@@ -110,7 +112,7 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             $('.link').on('click', function() 
             {
                 $("#loadImg").show();
-                $("#content_iframe").attr('src', $(this).attr("href"));
+                $("#content_iframe").attr('src', $(this).attr("data-url"));
                 $("#slide-menu-button").click();
             });
         }
