@@ -81,9 +81,8 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                     {
                         sublinkli.push('<li class="subMenu" href="' + data[i].subpages[j].url.replace("www.", "test3.") + "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >');
                     }
-                    lis.push('<div id="sub' + i + '">' + sublinkli.join("") + '</div>')
+                    lis.push('<div class="sub' + i + '">' + sublinkli.join("") + '</div>')
                 }
-                
             }
             $(".dropBox").html(lis.join(""))
             $('.subMenu').on('click', function() 
