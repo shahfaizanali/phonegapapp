@@ -87,7 +87,7 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             var lis = [];
             for (i in data)
             {   
-                lis.push('<li href="'+data[i].url+'" class="mainMenu open"><a>'+data[i].title+'</a><a class="arrow"></a></li>');
+                lis.push('<li href="'+data[i].url+'" class="mainMenu open"><a>'+data[i].title+'</a><a class="arrow"></a>');
                 if (data[i].subpages.length != 0)
                 {   
                     var sublinksul = [];
@@ -96,7 +96,7 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                     {
                         sublinkli.push('<li class="subMenu" href="' + data[i].subpages[j].url.replace("www.", "test3.") + "?tx_bnadaptiveprofile=Phone" + '" > <a href="javascript:;" > ' + data[i].subpages[j].title + ' </a></li >');
                     }
-                    lis.push(' <ul class="smallMenu">' + sublinkli.join("") + '</ul>')
+                    lis.push(' <ul class="smallMenu">' + sublinkli.join("") + '</ul></li>')
                 }
                 
             }
@@ -105,8 +105,6 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             {
                 $("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("href"));
-                $("#content_iframe").attr('height', $(window).height());
-                $("#content_iframe").attr('width', $(window).width());
                 $("#slide-menu-button").click();
             });
         }
