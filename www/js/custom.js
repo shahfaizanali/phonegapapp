@@ -74,11 +74,8 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-   var useragent = navigator.userAgent;
-   navigator.__defineGetter__('userAgent', function(){
-    return useragent+";USC_mobile_app_v1"; // customized user agent
-});
   
+   
 $("#loadImg div").height($(window).height());
 $("#loadImg div").width($(window).width());
 $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
@@ -98,7 +95,7 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
                     var sublinkli = [];
                     for (j in data[i].subpages)
                     {
-                        sublinkli.push('<li class="subMenu"> <a class="link" data-url="'+data[i].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].subpages[j].title+'</a></li >');
+                        sublinkli.push('<li class="subMenu"> <a class="link" data-url="'+data[i].subpages[j].url.replace("www.", "test3.") + '?tx_bnadaptiveprofile=Phone" href="javascript:;">'+data[i].subpages[j].title+'</a></li >');
 
                     }
                    
