@@ -67,14 +67,14 @@
 .arrow {
 	background: url(../img/aerrow.png) no-repeat !important;
 	background-size: 100% 100% !important;
-	width: 15% !important;
+	width: 12% !important;
 	height: 20px !important;
 	float: right !important;
 	padding: 0 !important;
 }
 .dropBox li a {
 	color: white;
-	width: 85%;
+	width: 88%;
 	padding: 5% 4%;
 	float: left;
 }
