@@ -1,3 +1,4 @@
+
 var tapEvent = 'click'; // tap event click
 
 
@@ -67,10 +68,24 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-$("#loadImg div").height($(window).height());
-$("#loadImg div").width($(window).width());
-$("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
+   
+    var url;
+    switch(window.orientation) 
+    {  
+      case -90:
+      case 90:
+        url="?tx_bnadaptiveprofile=PhoneHorizontal";
+        break; 
+      default:
+        url="?tx_bnadaptiveprofile=Phone";
+        break; 
+    }
     
+    
+    $("#loadImg div").height($(window).height());
+    $("#loadImg div").width($(window).width());
+    $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
+
     $.ajax({
         type: 'GET',
         url: "http://www.uscommunities.org/index.php?id=729",
@@ -105,6 +120,8 @@ $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-wo
             });
             $('.link').on('click', function() 
             {
+                $('a.active').removeClass('active');
+                $(this).addClass('active');
                 $("#loadImg").show();
                 $("#content_iframe").attr('src', $(this).attr("data-url"));
                 $("#slide-menu-button").click();

@@ -36,14 +36,14 @@
 .arrow {
 	background: url(../img/aerrow.png) no-repeat !important;
 	background-size: 100% 100% !important;
-	width: 8% !important;
+	width: 15% !important;
 	height: 20px !important;
 	float: right !important;
 	margin: 3% 2%;
 }
 .dropBox li a {
 	color: white;
-	width: 90%;
+	width: 85%;
 	padding: 4% 4%;
 	float: left;
 }
@@ -52,3 +52,11 @@
 	padding-left: 25%;
 }
 
+.active {
+    
+    background-color: white;
+    color: #006BA4 !important;
+    
+    
+    
+}
