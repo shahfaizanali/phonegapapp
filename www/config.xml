@@ -43,10 +43,15 @@
     <gap:splash gap:density="hdpi" gap:platform="android" src="res/screen/android/screen-hdpi-portrait.jpg" />
     <gap:splash gap:density="xhdpi" gap:platform="android" src="res/screen/android/screen-xhdpi-portrait.jpg" />
     <gap:splash gap:platform="blackberry" src="res/screen/blackberry/screen-225.png" />
-    <gap:splash gap:platform="ios" height="480" src="res/screen/ios/screen-iphone-portrait.jpg" width="320" />
-    <gap:splash gap:platform="ios" height="960" src="res/screen/ios/screen-iphone-portrait-2x.jpg" width="640" />
-    <gap:splash gap:platform="ios" height="1024" src="res/screen/ios/screen-ipad-portrait.jpg" width="768" />
-    <gap:splash gap:platform="ios" height="768" src="res/screen/ios/screen-ipad-landscape.jpg" width="1024" />
+    <gap:splash src="res/screen/ios/320x480_anroid_samsung_glaxy_.png" gap:platform="ios" width="320" height="480" />
+    <gap:splash src="res/screen/ios/640x960_iphone4_s3_normal_.png" gap:platform="ios" width="640" height="960" />
+    <gap:splash src="res/screen/ios/640x960_landscap_.png" gap:platform="ios" width="960" height="640" />
+    <gap:splash src="res/screen/ios/640x1136_iphone5_.png" gap:platform="ios" width="640" height="1136" />
+    <gap:splash src="res/screen/ios/640x1136_landscap_.png" gap:platform="ios" width="1136" height="640" />
+    <gap:splash src="res/screen/ios/1024x760_landscap_.png" gap:platform="ios" width="1024" height="748" />
+    <gap:splash src="res/screen/ios/760x1024_ipad_.png" gap:platform="ios" width="768" height="1024" />
+    <!-- retina iPad support: PhoneGap 2.5.0+ only -->
+    <gap:splash src="res/screen/ios/1536x2048_ipda_ratina_.png" gap:platform="ios" width="1536" height="2048" />
     <gap:splash gap:platform="winphone" src="res/screen/windows-phone/screen-portrait.jpg" />
     <access origin="*" />
 </widget>
