@@ -1,14 +1,23 @@
-// general vars
 var tapEvent = 'click'; // tap event click
 
 
 $.ui.ready(function(){
 	callForScroll();
-	//alert(screen.height);
+	
 	var mainHeight;
 	mainHeight = screen.height;
+	
+	//Dynamic heights for slider menu
 	$('.main-content').css('height',mainHeight+'px'); 
-	$('.side-nav').css('height',mainHeight+'px');
+	$('.side-nav').css('height',mainHeight+'px'); 
+	
+	var otherHeight;
+	otherHeight = mainHeight - 50;
+	alert(otherHeight);
+	
+	// Dynamic Heights for side menu and main container
+	$('.dropBox').css('height',otherHeight+'px'); 
+	$('.iframeContainer').css('height',otherHeight+'px');
 		
 	 var slideMenuButton = document.getElementById('slide-menu-button');
    	 slideMenuButton.onclick = function (e) {
@@ -20,21 +29,7 @@ $.ui.ready(function(){
         }
     };
 	
-//	$('.arrow').bind(tapEvent,function(){
-//		//evt = svt.parentNode;
-//                alert("fds");
-//			if($(this).parent().hasClass('open')){
-//			$(this).parent().removeClass('open');
-//			$(this).parent().addClass('close');
-//			$('.close ul').css('display','block');
-//		}
-//			else{
-//			$(this).parent().removeClass('close');
-//			$(this).parent().addClass('open');
-//			$('.open ul').css('display','none');
-//		}
-//		
-//	})
+	
 	
 });
 
