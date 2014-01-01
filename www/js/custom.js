@@ -13,8 +13,6 @@ $.ui.ready(function(){
 	
 	var otherHeight;
 	otherHeight = mainHeight - 50;
-	alert(otherHeight);
-	
 	// Dynamic Heights for side menu and main container
 	$('.dropBox').css('height',otherHeight+'px'); 
 	$('.iframeContainer').css('height',otherHeight+'px');
