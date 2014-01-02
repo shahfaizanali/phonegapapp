@@ -94,13 +94,15 @@ $(document).ready(function() {
 
 function load_data()
 {
-      
     $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
 
     $.ajax({
         type: 'GET',
-        url: "http://www.uscommunities.org/index.php?id=729",
+        url: "http://192.168.15.73:3000/dashboard/location_files",
         dataType: 'json',
+        beforeSend: function(request) {
+    request.setRequestHeader("User-Agent","InsertUserAgentStringHere");
+  },
         success: function(data)
         {
            
