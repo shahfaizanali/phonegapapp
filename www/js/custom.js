@@ -68,21 +68,34 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-   
+   alert("hello "+window.device.model);
     var url;
-    switch(window.orientation) 
+     function doOnOrientationChange()
+  {
+   switch(window.orientation) 
     {  
       case -90:
       case 90:
         url="?tx_bnadaptiveprofile=PhoneHorizontal";
+        load_data();
         break; 
       default:
         url="?tx_bnadaptiveprofile=Phone";
+        load_data();
         break; 
     }
+  }
+
+  window.addEventListener('orientationchange', doOnOrientationChange);
+    load_data();
     
     
-    $("#loadImg div").height($(window).height());
+  
+
+
+function load_data()
+{
+      $("#loadImg div").height($(window).height());
     $("#loadImg div").width($(window).width());
     $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
 
@@ -129,6 +142,8 @@ $(document).ready(function() {
         
         }
     });
+    
+    
+}
 });
-
 
