@@ -68,7 +68,7 @@ function callForScroll(){
 	}
 
 $(document).ready(function() {
-   alert("hello "+window.device.model);
+   
     var url;
      function doOnOrientationChange()
   {
@@ -89,7 +89,7 @@ $(document).ready(function() {
   window.addEventListener('orientationchange', doOnOrientationChange);
     load_data();
     
-    
+    alert("hello "+device.model);
   
 
 

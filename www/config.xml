@@ -10,7 +10,7 @@
     <feature name="Device">
     <param name="android-package" value="org.apache.cordova.device.Device" />
     </feature>
-
+    <plugin name="Device" value="org.apache.cordova.Device" />
     <feature name="http://api.phonegap.com/1.0/device" />
     <preference name="permissions" value="none" />
     <preference name="orientation" value="default" />
