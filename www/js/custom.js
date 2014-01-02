@@ -89,14 +89,12 @@ $(document).ready(function() {
   window.addEventListener('orientationchange', doOnOrientationChange);
     load_data();
     
-    alert("hello "+device.model);
   
 
 
 function load_data()
 {
-      $("#loadImg div").height($(window).height());
-    $("#loadImg div").width($(window).width());
+      
     $("#content_iframe").attr('src', "http://test3.uscommunities.org/about/how-it-works/?tx_bnadaptiveprofile=Phone");
 
     $.ajax({
