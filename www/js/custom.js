@@ -98,7 +98,7 @@ function load_data()
 
     $.ajax({
         type: 'GET',
-        url: "http://192.168.15.73:3000/dashboard/location_files",
+        url: "http://www.uscommunities.org/index.php?id=729",
         dataType: 'json',
         beforeSend: function(request) {
     request.setRequestHeader("User-Agent","InsertUserAgentStringHere");
