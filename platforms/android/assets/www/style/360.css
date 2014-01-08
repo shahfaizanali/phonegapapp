@@ -1,0 +1,56 @@
+/* ------ Login Screen ------ */
+.popupButton {
+	background: url(../img/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 6% !important;
+	height: 33px !important;
+	position: absolute !important;
+	top: 6px !important;
+	right: 7px;
+}
+.sliderBg {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: none;
+	z-index: 500;
+}
+.slider {
+	position: absolute;
+	width: 100%;
+	top: 6px;
+	right: 0;
+	left: 0px;
+}
+.dropBox {
+	background: url(../img/inactve_container.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	float: left;
+}
+.dropBox li {
+	width: 100%;
+	border-bottom: 1px solid #6cd9ff;
+}
+.arrow {
+	background: url(../img/aerrow.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	width: 12% !important;
+	height: 20px !important;
+	float: right !important;
+	margin: 4% 2%;
+}
+.dropBox li a {
+	color: white;
+	width: 88%;
+	padding: 5% 4%;
+	float: left;
+}
+.active {
+    
+    background-color: white;
+    color: #006BA4 !important;
+    
+    
+    
+}

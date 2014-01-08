@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+#afui #backButton {
+	color: transparent;
+	background: url(../img/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 6% !important;
+	height: 48px !important;
+	top: 6px !important;
+	left: 7px;
+}
+
+#customHeader {height:44px;}
+.panel{background:#005D8E;}
+.popupButton {
+	background: url(../img/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 11% !important;
+	height: 49px !important;
+	position: absolute !important;
+	top: 6px !important;
+	right: 15px;
+}
+#header {
+	height: 60px !important;
+}
+#header h1 {
+	line-height: 60px !important;
+	font-size: 30px !important;
+}
+.popupButton {
+	background: url(../img/menu.png) no-repeat;
+	background-size: 100% 100%;
+	width: 12% !important;
+	height: 49px !important;
+	position: absolute !important;
+	top: 6px !important;
+	right: 7px;
+}
+.sliderBg {position:relative; width:100%; height:100%; display: none; z-index: 500;}
+
+.slider {
+	position: absolute;
+	width: 100%;
+	top: 6px;
+	right:99px;
+}
+.dropBox {
+	background: url(../img/inactve_container.png) no-repeat;
+	background-size: 100% 100%;
+	width: 100%;
+	float: left;
+}
+.dropBox li {
+	width: 100%;
+		border-bottom: 1px solid #6cd9ff;
+}
+.arrow {
+	background: url(../img/aerrow.png) no-repeat !important;
+	background-size: 100% 100% !important;
+	width: 12% !important;
+	height: 33px !important;
+	float: right !important;
+	padding:0 !important;
+	margin: 4% 2%;
+}
+.dropBox li a {
+	color: white;
+	width: 88%;
+	padding: 4% 4%;
+	float: left;
+
+	font-size: 24px;
+}
+.active {
+    
+    background-color: white;
+    color: #006BA4 !important;
+    
+    
+    
+}
